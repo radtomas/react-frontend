@@ -1,0 +1,31 @@
+{
+    "root": true,
+    "env": {
+        "node": true,
+        "browser": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "rules": {
+        "no-console": "off",
+        "no-debugger": "off",
+        "max-len": ["error", {
+            "code": 80,
+            "ignoreUrls": true
+        }]
+    },
+    "plugins": ["react"],
+    "parserOptions": {
+        "parser": "babel-eslint",
+        "sourceType": "module",
+        "ecmaVersion": 2017
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
+}
