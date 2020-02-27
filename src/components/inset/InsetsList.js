@@ -1,7 +1,7 @@
 import * as React from "react";
 import {connect} from "react-redux";
 import {getInsets, setInset} from "../../store/inset/actions";
-import {Div} from "../styled";
+import {Container} from "../styled";
 
 class InsetsList extends React.Component {
   constructor(props) {
@@ -14,12 +14,12 @@ class InsetsList extends React.Component {
   }
 
   setInset(inset) {
-      this.props.setInset({inset: inset});
+    this.props.setInset({inset: inset});
   }
 
   render() {
     return (
-        <Div>
+        <Container fd="column">
           {this.props.insets && this.props.insets.length
               ? this.props.insets.map((inset, index) => {
                 return <button
@@ -28,7 +28,7 @@ class InsetsList extends React.Component {
                 >{inset.title}</button>;
               })
               : "No insets."}
-        </Div>
+        </Container>
     )
   }
 }

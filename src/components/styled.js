@@ -23,3 +23,7 @@ export const Container = styled(Div)`
     align-items: ${props => props.ai || "normal"};
     flex-direction: ${props => props.fd || "row"};
 `;
+
+export const Col = styled(Div)`
+  
+`;
