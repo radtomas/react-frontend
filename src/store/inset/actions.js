@@ -14,6 +14,10 @@ export function getInsets() {
     };
 }
 
+export function setInset(payload) {
+    return {type: actionTypes.SET_INSET, payload}
+}
+
 export function addInset(payload) {
     return {type: actionTypes.ADD_INSET, payload}
 }

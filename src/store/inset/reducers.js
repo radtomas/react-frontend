@@ -2,7 +2,7 @@ import actionTypes from "./constants";
 
 const initialState = {
     insets: [],
-    inset: null,
+    inset: {},
     isFetching: false
 };
 
@@ -14,7 +14,11 @@ function inset(state = initialState, action) {
                 isFetching: true
             };
         case actionTypes.SET_INSETS:
-            console.log('reducer', action.payload)
+            return {
+                ...state,
+                ...action.payload
+            };
+        case actionTypes.SET_INSET:
             return {
                 ...state,
                 ...action.payload
