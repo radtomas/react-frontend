@@ -1,4 +1,4 @@
-# php-frontend
+# React app
 Frontend for simple PHP api
 
 #
